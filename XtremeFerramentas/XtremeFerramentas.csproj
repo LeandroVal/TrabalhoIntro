@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF15815E-E4E6-48A6-8BBF-0034020F780C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XtremeFerramentas</RootNamespace>
+    <AssemblyName>XtremeFerramentas</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\clsData.cs" />
+    <Compile Include="Data\clsRetorno.cs" />
+    <Compile Include="Entities\ferramentas.cs" />
+    <Compile Include="Entities\tipo.cs" />
+    <Compile Include="Layouts\Setores\conset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Setores\conset.Designer.cs">
+      <DependentUpon>conset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\ConFun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\ConFun.Designer.cs">
+      <DependentUpon>ConFun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Setores\ExcSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Setores\ExcSet.Designer.cs">
+      <DependentUpon>ExcSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ConFer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ConFer.Designer.cs">
+      <DependentUpon>ConFer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferExc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferExc.Designer.cs">
+      <DependentUpon>ferExc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferrInserir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferrInserir.Designer.cs">
+      <DependentUpon>ferrInserir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferrRemover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferrRemover.Designer.cs">
+      <DependentUpon>ferrRemover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\funcConsultarDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\funcConsultarDebito.Designer.cs">
+      <DependentUpon>funcConsultarDebito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\FuncExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\FuncExcluir.Designer.cs">
+      <DependentUpon>FuncExcluir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\funcMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\funcMod.Designer.cs">
+      <DependentUpon>funcMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\ferMod.Designer.cs">
+      <DependentUpon>ferMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\conFerramenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\conFerramenta.Designer.cs">
+      <DependentUpon>conFerramenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContainerP.Designer.cs">
+      <DependentUpon>ContainerP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\cadFerramentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Ferramentas\cadFerramentas.Designer.cs">
+      <DependentUpon>cadFerramentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\cadfunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Funcionarios\cadfunc.Designer.cs">
+      <DependentUpon>cadfunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Setores\cadSetor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Setores\cadSetor.Designer.cs">
+      <DependentUpon>cadSetor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Movimentacoes\cefDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Movimentacoes\cefDevolucao.Designer.cs">
+      <DependentUpon>cefDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Movimentacoes\cefEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Movimentacoes\cefEmprestimo.Designer.cs">
+      <DependentUpon>cefEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Setores\modSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Setores\modSet.Designer.cs">
+      <DependentUpon>modSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Layouts\Movimentacoes\relatorioEmprestimoDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Movimentacoes\relatorioEmprestimoDevolucao.Designer.cs">
+      <DependentUpon>relatorioEmprestimoDevolucao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Layouts\Setores\conset.resx">
+      <DependentUpon>conset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Funcionarios\ConFun.resx">
+      <DependentUpon>ConFun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Setores\ExcSet.resx">
+      <DependentUpon>ExcSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Ferramentas\ConFer.resx">
+      <DependentUpon>ConFer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Ferramentas\ferExc.resx">
+      <DependentUpon>ferExc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Ferramentas\ferrInserir.resx">
+      <DependentUpon>ferrInserir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Ferramentas\ferrRemover.resx">
+      <DependentUpon>ferrRemover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Funcionarios\funcConsultarDebito.resx">
+      <DependentUpon>funcConsultarDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Funcionarios\FuncExcluir.resx">
+      <DependentUpon>FuncExcluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Funcionarios\funcMod.resx">
+      <DependentUpon>funcMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Ferramentas\ferMod.resx">
+      <DependentUpon>ferMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Ferramentas\conFerramenta.resx">
+      <DependentUpon>conFerramenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContainerP.resx">
+      <DependentUpon>ContainerP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Ferramentas\cadFerramentas.resx">
+      <DependentUpon>cadFerramentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Funcionarios\cadfunc.resx">
+      <DependentUpon>cadfunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Setores\cadSetor.resx">
+      <DependentUpon>cadSetor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Movimentacoes\cefDevolucao.resx">
+      <DependentUpon>cefDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Movimentacoes\cefEmprestimo.resx">
+      <DependentUpon>cefEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Setores\modSet.resx">
+      <DependentUpon>modSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Movimentacoes\relatorioEmprestimoDevolucao.resx">
+      <DependentUpon>relatorioEmprestimoDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-from-database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-Male-User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Male-User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-Male-User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male-User-Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Male-User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database-Upload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relatorio1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relatório2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Concluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCarrinho.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
